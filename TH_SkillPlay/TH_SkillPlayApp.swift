@@ -1,6 +1,6 @@
 //
 //  TH_SkillPlayApp.swift
-//  TH_SkillPlay
+//  SkillPlay Life
 //
 //  Created by IGOR on 15/08/2025.
 //
@@ -8,10 +8,11 @@
 import SwiftUI
 
 @main
-struct TH_SkillPlayApp: App {
+struct SkillPlayLifeApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .preferredColorScheme(.light) // Force light mode for consistent design
         }
     }
 }
