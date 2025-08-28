@@ -11,6 +11,7 @@ struct OnboardingView: View {
     @ObservedObject var appViewModel: AppViewModel
     @State private var currentSlide = 0
     @State private var showContent = false
+    @AppStorage("status") var status: Bool = false
     
     var body: some View {
         ZStack {
@@ -80,6 +81,7 @@ struct OnboardingView: View {
                         } else {
                             Button("Get Started") {
                                 appViewModel.completeOnboarding()
+                                status = true
                             }
                             .buttonStyle(PrimaryButtonStyle())
                             .scaleEffect(showContent ? 1.0 : 0.8)
